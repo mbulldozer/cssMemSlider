@@ -97,7 +97,7 @@ body {
 
 .navigation-btn {
     display: flex;
-    padding: 7px;
+    padding: 0 0.7rem;
     cursor: pointer;
 }
 
@@ -107,11 +107,32 @@ body {
     border-radius: 50%;
     border: 3px solid #0B0E1B;
     background-color: #0B0E1B;
-    transition: 0.5s ease-in-out;
+    transition: 0.7s ease-in-out;
 }
 
-.btn:hover {
+.navigation-btn:hover .btn {
     border: 3px solid whitesmoke;
+    background-color: whitesmoke;
+}
+
+#radio1:checked ~ .navigation .btn-1 .btn {
+    background-color: transparent;
+}
+
+#radio2:checked ~ .navigation .btn-2 .btn {
+    background-color: transparent;
+}
+
+#radio3:checked ~ .navigation .btn-3 .btn {
+    background-color: transparent;
+}
+
+#radio4:checked ~ .navigation .btn-4 .btn {
+    background-color: transparent;
+}
+
+#radio5:checked ~ .navigation .btn-5 .btn {
+    background-color: transparent;
 }
 
 .text_wrapper {
@@ -160,8 +181,12 @@ body {
         align-items: center;
     }
 
-    .div2 {
+    .text_wrapper {
         order: 1;
         width: 100%;
+    }
+
+    .navigation-btn {
+        padding: 0.8rem;
     }
 }
