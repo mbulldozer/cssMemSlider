@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 35px;
+    row-gap: 2rem;
     width: 80vw;
     margin: 0 auto;
     padding: 2rem;
@@ -102,8 +102,8 @@ body {
 }
 
 .btn {
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     border: 3px solid #0B0E1B;
     background-color: #0B0E1B;
