@@ -115,6 +115,10 @@ body {
     background-color: whitesmoke;
 }
 
+.navigation-btn:active .btn {
+    transform: scale(0.7);
+}
+
 #radio1:checked ~ .navigation .btn-1 .btn {
     background-color: transparent;
 }
