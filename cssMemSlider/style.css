@@ -35,6 +35,7 @@ body {
     display: flex;
     width: calc(80vw * 5);
     height: 60vh;
+    padding: 2rem 0;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -45,30 +46,27 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    filter: drop-shadow(0 0 0.8rem #0B0E1B);
 }
 
 .slide-1 {
-    background-image: url("test.png");
+    background-image: url("images/1.jpg");
 }
 
 .slide-2 {
-    background-image: url("test.png");
-}
-
-.slide-2 {
-    background-image: url("test.png");
+    background-image: url("images/2.jpg");
 }
 
 .slide-3 {
-    background-image: url("test.png");
+    background-image: url("images/3.jpg");
 }
 
 .slide-4 {
-    background-image: url("test.png");
+    background-image: url("images/4.jpg");
 }
 
 .slide-5 {
-    background-image: url("test.png");
+    background-image: url("images/5.jpg");
 }
 
 #radio1:checked ~ .slides_wrapper .slides {
@@ -179,7 +177,7 @@ body {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 980px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -188,9 +186,5 @@ body {
     .text_wrapper {
         order: 1;
         width: 100%;
-    }
-
-    .navigation-btn {
-        padding: 0.8rem;
     }
 }
