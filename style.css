@@ -7,6 +7,12 @@ input {
     display: none;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    background-color: #0B0E1B;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +20,10 @@ input {
     row-gap: 35px;
     width: 80vw;
     margin: 0 auto;
+    padding: 2rem;
     overflow: hidden;
+    background-color: #0295DB;
+    border-radius: 2rem;
 }
 
 .slides_wrapper {
@@ -62,23 +71,23 @@ input {
     background-image: url("test.png");
 }
 
-#radio1:checked ~ .slides {
+#radio1:checked ~ .slides_wrapper .slides {
     transform: translateX(0);
 }
 
-#radio2:checked ~ .slides {
+#radio2:checked ~ .slides_wrapper .slides {
     transform: translateX(-20%);
 }
 
-#radio3:checked ~ .slides {
+#radio3:checked ~ .slides_wrapper .slides {
     transform: translateX(-40%);
 }
 
-#radio4:checked ~ .slides {
+#radio4:checked ~ .slides_wrapper .slides {
     transform: translateX(-60%);
 }
 
-#radio5:checked ~ .slides {
+#radio5:checked ~ .slides_wrapper .slides {
     transform: translateX(-80%);
 }
 
@@ -88,7 +97,7 @@ input {
 
 .navigation-btn {
     display: flex;
-    padding: 5px;
+    padding: 7px;
     cursor: pointer;
 }
 
@@ -96,9 +105,54 @@ input {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 3px solid blueviolet;
-    background-color: blueviolet;
+    border: 3px solid #0B0E1B;
+    background-color: #0B0E1B;
+    transition: 0.5s ease-in-out;
 }
+
+.btn:hover {
+    border: 3px solid whitesmoke;
+}
+
+.text_wrapper {
+    height: 3rem;
+    overflow: hidden;
+}
+
+.text {
+    opacity: 0;
+    font-family: 'Bradley Hand', cursive;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #0B0E1B;
+    transition: 0.7s ease-in-out;
+}
+
+#radio1:checked ~ .text_wrapper .text-1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#radio2:checked ~ .text_wrapper .text-2 {
+    opacity: 1;
+    transform: translateY(-1.5rem);
+}
+
+#radio3:checked ~ .text_wrapper .text-3 {
+    opacity: 1;
+    transform: translateY(-3rem);
+}
+
+#radio4:checked ~ .text_wrapper .text-4 {
+    opacity: 1;
+    transform: translateY(-4.5rem);
+}
+
+#radio5:checked ~ .text_wrapper .text-5 {
+    opacity: 1;
+    transform: translateY(-6rem);
+}
+
 
 @media only screen and (max-width: 800px) {
     .container {
